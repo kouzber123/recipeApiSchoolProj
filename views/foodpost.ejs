@@ -1,0 +1,38 @@
+<%- include('partials/header'); -%>
+    <form class="recipeform" method="post">
+        <h1 class="h3 mb-3 fw-normal">Amazing things happens when you eat...👨‍🍳🥞</h1>
+
+        <input type="text" class="form-control" name="recipe" placeholder="We got you covered 🥑🥕🥩🍖">
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Search</button>
+    </form>
+    <div class="searchResults">
+        <%foodData.forEach((recipe, i)=>{ %>
+            <ul>
+                <li>
+                    <a href="foodName/<%=recipe.recipe.label%>/id/<%=i%>" id="<%=i%>">
+                        <div class="object">
+                            <img src=<%=recipe.recipe.image%> alt=<%=recipe.recipe.label%> }>
+                                <p id="title" class="title">
+                                    <%=recipe.recipe.label%>
+                                </p>
+                                <div class="data">
+                                    <span class="num">
+                                        <%=Math.trunc(recipe.recipe.calories)%>
+                                    </span>
+                                    <span>Calories</span>
+                                    <span class="num">
+                                        <%=recipe.recipe.ingredients.length%>
+                                    </span>
+                                    <span>Ingredients</span>
+
+                                </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <% })%>
+
+    </div>
+    <%- include('partials/footer'); -%>

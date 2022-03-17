@@ -1,0 +1,25 @@
+<%- include('partials/header'); -%>
+    <div class="tempContainer">
+        <div class="tempItems">
+            <h3>
+                Weather in <%=weather.name %>
+                    <img src=<%=img%> alt="">
+            </h3>
+            <p>
+                Today the weather is <%=weather.weather[0].description %>
+            </p>
+            <p>
+                <%=weather.main.temp %> Celcius degrees
+            </p>
+
+            <form action="/" method="post" class="weatherform">
+                <input type="text" required="true" class="form-control formCustom" name="country"
+                    placeholder="Country/City">
+                <button class="btn btn-lg btn-primary formCustom" type="submit">Search the weather</button>
+            </form>
+        </div>
+
+    </div>
+
+
+    <%- include('partials/footer'); -%>

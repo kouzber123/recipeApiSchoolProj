@@ -1,0 +1,52 @@
+<%- include('partials/header'); -%>
+    <form class="recipeform" method="post" action="/foods">
+        <h1 class="h3 mb-3 fw-normal">Amazing things happens when you eat...👨‍🍳🥞</h1>
+
+        <input type="text" class="form-control" name="recipe" placeholder="We got you covered 🥑🥕🥩🍖">
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Search</button>
+    </form>
+    <div class="recipeCard">
+        <div class="recipeContainer">
+
+            <div class="itemA">
+                <img class="recipeImg " itemprop="image" src=<%=foodData.image%> alt=<%=foodData.label%>}>
+            </div>
+
+            <div class="itemB data">
+                <h3 class="recipeTitle">
+                    <%=foodData.label%>
+                </h3>
+            </div>
+            <div class="data itemC">
+                <h3>Ingredients : <%=foodData.ingredients.length%>
+                </h3>
+                <ul>
+                    <%foodData.ingredientLines.forEach(line=>{ %>
+                        <li>
+                            <%=line%>
+                        </li>
+                        <%})%>
+                            <br>
+                            <a href="<%=foodData.url%>">Check the Instructions 😋</a>
+                </ul>
+
+            </div>
+            <div class="data itemD">
+                <h3>Calories : <%=Math.trunc(foodData.calories)%>
+                </h3>
+                <h4>totalNutrients</h4>
+                <ul>
+                    <% for(const key in foodData.totalNutrients){ %>
+                        <li>
+                            <%=foodData.totalNutrients[key].label%> :
+                                <%=Math.round(foodData.totalNutrients[key].quantity)%>
+                                    <%=foodData.totalNutrients[key].unit%>
+                        </li>
+                        <%}%>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer'); -%>

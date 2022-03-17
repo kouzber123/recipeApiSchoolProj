@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  min-height: 400px;
+  margin-bottom: 150px;
+  clear: both;
+  background-color: #ffffff9d;
+  background-image: url("https://www.transparenttextures.com/patterns/food.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 255, 34, 0.288);
+}
+.searchResults {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.object {
+  margin-top: 10px;
+  margin-right: 45px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.815);
+  box-shadow: 3px 3px 3px;
+  border: 1px solid rgba(0, 0, 0, 0.575);
+}
+a {
+  color: #666;
+}
+a:hover {
+  background-color: rgba(0, 0, 0, 0.486);
+  color: rgba(79, 161, 228, 0.658);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.recipeform {
+  text-align: center;
+  background-color: rgba(0, 128, 0, 0.616);
+  border: black 5px solid;
+  padding: 10px;
+  margin-left: 25%;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.322);
+}
+.title {
+  height: 40px;
+  overflow: hidden;
+  margin: 0px 10px;
+  padding-top: 5px;
+  font: normal 14px Arial;
+  text-shadow: 1px 1px 0px #fff;
+}
+.data {
+  display: inline-block;
+  margin-left: 3px;
+  font: normal 10px Arial;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #fff;
+  color: #666;
+}
+.num {
+  font: normal 12px Arial;
+  text-shadow: 1px 1px 0px #fff;
+  color: #7c0;
+}
+.tempContainer {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.596);
+  color: white;
+}
+
+.formCustom {
+  width: 10%;
+}
+
+.recipeCard {
+  display: grid;
+  justify-items: center;
+}
+
+.recipeContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    "header body content2 "
+    "content content content2"
+    "content content content2";
+  margin: 40px;
+  background-color: rgba(248, 248, 248, 0.651);
+  border: 5px solid rgba(128, 128, 128, 0.233);
+  box-shadow: 5px 5px 5px;
+  width: 60%;
+}
+
+.itemA {
+  grid-area: header;
+}
+.recipeImg {
+  box-shadow: 2px 2px 1px;
+}
+.itemB {
+  grid-area: body;
+}
+.itemC {
+  grid-area: content;
+}
+.itemD {
+  grid-area: content2;
+  padding-left: 15px;
+  border-left: 5px solid rgba(128, 128, 128, 0.233);
+}
+.itemB,
+.itemC,
+.itemC,
+.itemD {
+  padding-top: 10px;
+  font-weight: bold;
+}
+.recipeTitle {
+  text-decoration: underline;
+  text-align: center;
+}

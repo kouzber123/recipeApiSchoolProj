@@ -100,6 +100,7 @@ li {
   border: 5px solid rgba(128, 128, 128, 0.233);
   box-shadow: 5px 5px 5px;
   width: 60%;
+  padding: 10px;
 }
 
 .itemA {

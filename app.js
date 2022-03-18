@@ -13,10 +13,9 @@ app.use(express.static("public"));
 var lookFor = {
   label: String,
 };
-
+const key = "c0079132d6f5ae19bb06dadb73eca002";
+const units = "metric";
 app.get("/", (req, res) => {
-  const key = "c0079132d6f5ae19bb06dadb73eca002";
-  const units = "metric";
   const url = `https://api.openweathermap.org/data/2.5/find?q=helsinki&appid=${key}&units=${units}`;
   https.get(url, (response) => {
     response.on("data", (data) => {
